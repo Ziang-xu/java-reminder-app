@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">todo</string>
+    <string name="title_activity_add">add</string>
+    <string name="title_activity_edit">edit</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_my_location_map">Map</string>
+</resources>

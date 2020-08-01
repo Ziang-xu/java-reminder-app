@@ -1,0 +1,196 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/itemTitleLabel"
+        android:layout_width="59dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:focusable="false"
+        android:gravity="center"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:text="Title"
+        android:textAlignment="textEnd"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/itemCreatedLabel"
+        app:layout_constraintEnd_toEndOf="@+id/itemCreatedLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemNotesLabel"
+        android:layout_width="59dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:focusable="false"
+        android:gravity="center"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:text="Notes"
+        android:textAlignment="textEnd"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/itemNotesTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemLocationLabel" />
+
+    <TextView
+        android:id="@+id/itemCreationDateTimeTextView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Creation Date and Time"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/itemReminderDateTimeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemCreatedLabel"
+        app:layout_constraintTop_toBottomOf="@+id/itemCompletedSwitch" />
+
+    <TextView
+        android:id="@+id/itemLocationLabel"
+        android:layout_width="59dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="Location"
+        android:textAlignment="textEnd"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/itemNotesLabel"
+        app:layout_constraintEnd_toEndOf="@+id/itemNotesLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemReminderLabel" />
+
+    <Switch
+        android:id="@+id/itemCompletedSwitch"
+        android:layout_width="42dp"
+        android:layout_height="30dp"
+        android:gravity="start|bottom"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/itemCreationDateTimeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemCompletedSwitchLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemReminderDateTimeTextView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+
+        android:gravity="center"
+        android:inputType="date"
+        android:text="Reminder Date and Time"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/itemLocationTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemReminderLabel"
+        app:layout_constraintStart_toStartOf="@+id/itemLocationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/itemCreationDateTimeTextView" />
+
+    <TextView
+        android:id="@+id/itemCreatedLabel"
+        android:layout_width="59dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="Created"
+        android:textAlignment="textEnd"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/itemReminderLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemCreationDateTimeTextView" />
+
+    <TextView
+        android:id="@+id/itemReminderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="6dp"
+        android:gravity="center"
+        android:text="Reminder"
+        android:textAlignment="textEnd"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/itemLocationLabel"
+        app:layout_constraintEnd_toEndOf="@+id/itemLocationLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCreatedLabel" />
+
+    <TextView
+        android:id="@+id/itemCompletedSwitchLabel"
+        android:layout_width="86dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="Completed"
+        android:textColor="#F44336"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/itemCreationDateTimeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/itemCompletedSwitch"
+        app:layout_constraintStart_toEndOf="@+id/itemTitleTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="Reminder Title"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/itemCreationDateTimeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/itemCompletedSwitchLabel"
+        app:layout_constraintStart_toEndOf="@+id/itemTitleLabel"
+        app:layout_constraintStart_toStartOf="@+id/itemCreationDateTimeTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemNotesTextView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Notes"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemNotesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/itemLocationTextView" />
+
+    <TextView
+        android:id="@+id/itemLocationTextView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Location"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/itemNotesTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemLocationLabel"
+        app:layout_constraintStart_toStartOf="@+id/itemNotesTextView"
+        app:layout_constraintTop_toBottomOf="@+id/itemReminderDateTimeTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
